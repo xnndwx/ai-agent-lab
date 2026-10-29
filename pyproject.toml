@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-agent-lab"
+version = "0.1.0"
+description = "第 1 周：本地 Ollama（约 3B）上的最小 Agent 学习骨架"
+readme = "README.md"
+requires-python = ">=3.10"
+# 第 1 周只用标准库访问 Ollama，不引入 LangChain / LangGraph
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+week01 = "week01.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
