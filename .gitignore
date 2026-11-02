@@ -20,3 +20,6 @@ dist/
 # 编辑器
 .idea/
 .vscode/
+
+sessions/
+
